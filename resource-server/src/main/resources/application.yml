@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+resource-server:
+  instance:
+    id: ${INSTANCE_ID:server-1}
+    name: ${INSTANCE_NAME:Resource Server}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
